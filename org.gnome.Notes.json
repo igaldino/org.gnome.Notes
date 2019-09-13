@@ -1,7 +1,7 @@
 {
     "app-id" : "org.gnome.Notes",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "3.32",
+    "runtime-version" : "3.34",
     "sdk" : "org.gnome.Sdk",
     "command" : "bijiben",
     "finish-args" : [
@@ -13,10 +13,6 @@
         "--talk-name=org.gtk.vfs",
         "--talk-name=org.gtk.vfs.*",
         "--filesystem=host:ro",
-        "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.config/dconf:ro",
-        "--talk-name=ca.desrt.dconf",
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
         "--talk-name=org.gnome.OnlineAccounts",
         "--talk-name=org.gnome.evolution.dataserver.AddressBook9",
         "--talk-name=org.gnome.evolution.dataserver.Calendar7",
@@ -46,8 +42,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/gnome-online-accounts/3.32/gnome-online-accounts-3.32.0.tar.xz",
-                    "sha256" : "1c19e65771c8d16fa0016ab70d9a1ee2b75a84aeeedd24527a4e41b132e8d4aa"
+                    "url" : "https://download.gnome.org/sources/gnome-online-accounts/3.34/gnome-online-accounts-3.34.0.tar.xz",
+                    "sha256" : "c44fbce4eeb54703a2ab4954d54f11eb29666f9cf61b5275b9fe0fc033377f57"
                 }
             ]
         },
@@ -59,13 +55,17 @@
             "buildsystem" : "cmake",
             "config-opts" : [
                 "-DCMAKE_INSTALL_LIBDIR:PATH=/app/lib",
-                "-DBUILD_SHARED_LIBS:BOOL=ON"
+                "-DBUILD_SHARED_LIBS:BOOL=ON",
+                "-DGOBJECT_INTROSPECTION:BOOL=OFF",
+                "-DICAL_BUILD_DOCS:BOOL=OFF",
+                "-DICAL_GLIB_VAPI:BOOL=OFF",
+                "-DICAL_GLIB:BOOL=ON"
             ],
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://github.com/libical/libical/releases/download/v3.0.3/libical-3.0.3.tar.gz",
-                    "sha256" : "5b91eb8ad2d2dcada39d2f81d5e3ac15895823611dc7df91df39a35586f39241"
+                    "url" : "https://github.com/libical/libical/releases/download/v3.0.5/libical-3.0.5.tar.gz",
+                    "sha256" : "7ad550c8c49c9b9983658e3ab3e68b1eee2439ec17b169a6b1e6ecb5274e78e6"
                 }
             ]
         },
@@ -95,9 +95,12 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/evolution-data-server/3.32/evolution-data-server-3.32.0.tar.xz",
-                    "sha256" : "8e10b84974e483322e07a97c57dff56ffb208aa0c33e39a13208d6c52470ddde"
+                    "url" : "https://download.gnome.org/sources/evolution-data-server/3.34/evolution-data-server-3.34.0.tar.xz",
+                    "sha256" : "fb9db0a824ae01ecc63c82cf8e503fecdcba7118b919f04bda7d8d91f3e486cf"
                 }
+            ],
+            "modules": [
+                "shared-modules/intltool/intltool-0.51.json"
             ]
         },
         {
@@ -122,8 +125,8 @@
             "sources" : [
                 {
                    "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/tracker/2.2/tracker-2.2.1.tar.xz",
-                    "sha256" : "0ccef9e67440859119fa6cae230355c1b1b3485ac08122017c9499ad2dada2ff"
+                    "url" : "https://download.gnome.org/sources/tracker/2.3/tracker-2.3.0.tar.xz",
+                    "sha256" : "2c04534da83419b0bc65216e367da51a420f52bb8449f4cc4542c651e5c6bf7b"
                 }
             ]
         },
@@ -136,8 +139,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/bijiben/3.32/bijiben-3.32.2.tar.xz",
-                    "sha256" : "c23bc5af5e83a85cb4fdc6873ad800c2afb48dbcadfdce7c1dfdb2a3a7131532"
+                    "url" : "https://download.gnome.org/sources/bijiben/3.34/bijiben-3.34.0.tar.xz",
+                    "sha256" : "34d8336c326b88bdc1243ad5e85358630ae03b418c0dc15cdb4093c7aed63673"
                 }
             ]
         }
