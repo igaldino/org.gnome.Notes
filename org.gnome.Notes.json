@@ -70,6 +70,17 @@
             ]
         },
         {
+            "name": "intltool",
+            "cleanup": [ "*" ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz",
+                    "sha256": "67c74d94196b153b774ab9f89b2fa6c6ba79352407037c8c14d5aeb334e959cd"
+                }
+            ]
+        },
+        {
             "name" : "evolution-data-server",
             "cleanup" : [
                 "/lib/cmake",
@@ -98,9 +109,6 @@
                     "url" : "https://download.gnome.org/sources/evolution-data-server/3.34/evolution-data-server-3.34.0.tar.xz",
                     "sha256" : "fb9db0a824ae01ecc63c82cf8e503fecdcba7118b919f04bda7d8d91f3e486cf"
                 }
-            ],
-            "modules": [
-                "shared-modules/intltool/intltool-0.51.json"
             ]
         },
         {
