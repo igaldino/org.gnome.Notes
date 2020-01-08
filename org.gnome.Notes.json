@@ -42,8 +42,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/gnome-online-accounts/3.34/gnome-online-accounts-3.34.0.tar.xz",
-                    "sha256" : "c44fbce4eeb54703a2ab4954d54f11eb29666f9cf61b5275b9fe0fc033377f57"
+                    "url" : "https://download.gnome.org/sources/gnome-online-accounts/3.34/gnome-online-accounts-3.34.1.tar.xz",
+                    "sha256" : "4832ca8e48d3a497fc676e7b6f146009ab4206995362977b9805aa39f164783a"
                 }
             ]
         },
@@ -106,8 +106,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/evolution-data-server/3.34/evolution-data-server-3.34.0.tar.xz",
-                    "sha256" : "fb9db0a824ae01ecc63c82cf8e503fecdcba7118b919f04bda7d8d91f3e486cf"
+                    "url" : "https://download.gnome.org/sources/evolution-data-server/3.34/evolution-data-server-3.34.3.tar.xz",
+                    "sha256" : "d2dfac5ca76e05e872fbb06a57cae0dace64818c4dce1e906b0396888270c3a9"
                 }
             ]
         },
@@ -133,8 +133,8 @@
             "sources" : [
                 {
                    "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/tracker/2.3/tracker-2.3.0.tar.xz",
-                    "sha256" : "2c04534da83419b0bc65216e367da51a420f52bb8449f4cc4542c651e5c6bf7b"
+                    "url" : "https://download.gnome.org/sources/tracker/2.3/tracker-2.3.1.tar.xz",
+                    "sha256" : "b6748726e465ad2f4d991560634b1fd0df8841f3d981b3b837c4162abedf08a1"
                 }
             ]
         },
