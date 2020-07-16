@@ -61,8 +61,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/gnome-online-accounts/3.34/gnome-online-accounts-3.34.1.tar.xz",
-                    "sha256" : "4832ca8e48d3a497fc676e7b6f146009ab4206995362977b9805aa39f164783a"
+                    "url" : "https://download.gnome.org/sources/gnome-online-accounts/3.36/gnome-online-accounts-3.36.0.tar.xz",
+                    "sha256" : "1c8f62990833ca41188dbb80c5e99d99b57a62608ca675bbcd37bc2244742f2e"
                 }
             ]
         },
@@ -71,7 +71,7 @@
             "cleanup" : [
                 "/lib/cmake"
             ],
-            "buildsystem" : "cmake",
+            "buildsystem" : "cmake-ninja",
             "config-opts" : [
                 "-DCMAKE_INSTALL_LIBDIR:PATH=/app/lib",
                 "-DBUILD_SHARED_LIBS:BOOL=ON",
@@ -96,8 +96,9 @@
                 "/libexec",
                 "/share/dbus-1/services"
             ],
-            "buildsystem" : "cmake",
+            "buildsystem" : "cmake-ninja",
             "config-opts" : [
+                "-DENABLE_CANBERRA=OFF",
                 "-DENABLE_GTK=ON",
                 "-DENABLE_GOOGLE_AUTH=OFF",
                 "-DENABLE_UOA=OFF",
@@ -114,8 +115,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/evolution-data-server/3.36/evolution-data-server-3.36.0.tar.xz",
-                    "sha256" : "d4d70e6658fb9e1f85639dcff315bbdddd3aa2de2ad069b1776af3fb9e9598ec"
+                    "url" : "https://download.gnome.org/sources/evolution-data-server/3.36/evolution-data-server-3.36.4.tar.xz",
+                    "sha256" : "39f83f1eee65c18785dfc2594720d5150e3fc37ea57e7b3b9bc2c40b4d3e4c0f"
                 }
             ]
         },
@@ -141,8 +142,8 @@
             "sources" : [
                 {
                    "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/tracker/2.3/tracker-2.3.2.tar.xz",
-                    "sha256" : "a4782b8ec7e4ee50f8f53865b24c5489823337fa94f785a7d9d34ccdf9b6ebdb"
+                    "url" : "https://download.gnome.org/sources/tracker/2.3/tracker-2.3.4.tar.xz",
+                    "sha256" : "577952244ab977c78b0b88e2f63c4197eaba16e4d66bff692b7f58993e06516d"
                 }
             ]
         },
