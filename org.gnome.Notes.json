@@ -1,7 +1,7 @@
 {
     "app-id" : "org.gnome.Notes",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "3.36",
+    "runtime-version" : "3.38",
     "sdk" : "org.gnome.Sdk",
     "command" : "bijiben",
     "finish-args" : [
@@ -45,9 +45,9 @@
             ],
             "sources" : [
                 {
-                    "type" : "git",
-                    "url" : "https://source.puri.sm/Librem5/libhandy.git",
-                    "tag" : "v0.0.13"
+                    "type" : "archive",
+                    "url" : "https://gitlab.gnome.org/GNOME/libhandy/-/archive/v0.0.13/libhandy-v0.0.13.tar.gz",
+                    "sha256" : "645355a009f23f254eaec7752b9489c3c2f5832397fcec75433a7e00efbfe52f"
                 }
             ]
         },
@@ -115,8 +115,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/evolution-data-server/3.36/evolution-data-server-3.36.4.tar.xz",
-                    "sha256" : "39f83f1eee65c18785dfc2594720d5150e3fc37ea57e7b3b9bc2c40b4d3e4c0f"
+                    "url" : "https://download.gnome.org/sources/evolution-data-server/3.38/evolution-data-server-3.38.0.tar.xz",
+                    "sha256" : "13689a7b55765806c4d5f3b05ef6c24b0bf9957b9ed9240c2dd09a2cdb13b0af"
                 }
             ]
         },
@@ -133,22 +133,21 @@
             "config-opts" : [
                 "--default-library=shared",
                 "-Ddocs=false",
-                "-Dfts=false",
-                "-Dfunctional_tests=false",
-                "-Djournal=false",
-                "-Dbash-completion=no",
-                "-Dsystemd_user_services=no"
+                "-Dman=false",
+                "-Dbash-completion=false",
+                "-Dsystemd_user_services=false",
+                "-Dtest_utils=false"
             ],
             "sources" : [
                 {
                    "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/tracker/2.3/tracker-2.3.4.tar.xz",
-                    "sha256" : "577952244ab977c78b0b88e2f63c4197eaba16e4d66bff692b7f58993e06516d"
+                    "url" : "https://download.gnome.org/sources/tracker/3.0/tracker-3.0.0.tar.xz",
+                    "sha256" : "70864515f5752b0596f9c442d7e86585734f42b82a9233e55dae6ac2b0d33837"
                 }
             ]
         },
         {
-            "name" : "bijiben",
+            "name" : "gnome-notes",
             "buildsystem" : "meson",
             "config-opts" : [
                 "-Dprivate_store=true"
@@ -156,8 +155,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/bijiben/3.36/bijiben-3.36.3.tar.xz",
-                    "sha256" : "70e9b621e11bf7af6c6248f8c99830f6ffbff605fb43a848d26880e7e1b52dd6"
+                    "url" : "https://download.gnome.org/sources/bijiben/3.38/bijiben-3.38.0.tar.xz",
+                    "sha256" : "1ff6cc0ac6c62907bf2a09a17215edd2f17b74dacab3a5c89a29c3049172be2b"
                 }
             ]
         }
