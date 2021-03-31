@@ -1,7 +1,7 @@
 {
     "app-id" : "org.gnome.Notes",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "3.38",
+    "runtime-version" : "40",
     "sdk" : "org.gnome.Sdk",
     "command" : "bijiben",
     "finish-args" : [
@@ -34,6 +34,18 @@
     "modules" : [
         "shared-modules/intltool/intltool-0.51.json",
         {
+            "name" : "curl",
+            "builddir" : true,
+            "buildsystem" : "cmake",
+            "sources" : [
+                {
+                    "type" : "archive",
+                    "url" : "https://curl.se/download/curl-7.76.0.tar.xz",
+                    "sha256" : "6302e2d75c59cdc6b35ce3fbe716481dd4301841bbb5fd71854653652a014fc8"
+                }
+            ]
+        },
+        {
             "name" : "libhandy",
             "buildsystem" : "meson",
             "config-opts" : [
@@ -46,8 +58,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/GNOME/libhandy/-/archive/v0.0.13/libhandy-v0.0.13.tar.gz",
-                    "sha256" : "645355a009f23f254eaec7752b9489c3c2f5832397fcec75433a7e00efbfe52f"
+                    "url" : "https://download.gnome.org/sources/libhandy/1.2/libhandy-1.2.0.tar.xz",
+                    "sha256" : "39f590ae20910e76fe1c0607b2ebe589750f45610d6aeec5c30e2ee602a20b25"
                 }
             ]
         },
@@ -55,14 +67,15 @@
             "name" : "gnome-online-accounts",
             "config-opts" : [
                 "--disable-Werror",
+                "--disable-telepathy",
                 "--disable-documentation",
                 "--disable-backend"
             ],
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/gnome-online-accounts/3.36/gnome-online-accounts-3.36.0.tar.xz",
-                    "sha256" : "1c8f62990833ca41188dbb80c5e99d99b57a62608ca675bbcd37bc2244742f2e"
+                    "url" : "https://download.gnome.org/sources/gnome-online-accounts/3.38/gnome-online-accounts-3.38.1.tar.xz",
+                    "sha256" : "e18889d67806da84d1261bfed1cf61d2baec131d2d0d0a92f83ff33d4649358e"
                 }
             ]
         },
@@ -115,8 +128,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/evolution-data-server/3.38/evolution-data-server-3.38.0.tar.xz",
-                    "sha256" : "13689a7b55765806c4d5f3b05ef6c24b0bf9957b9ed9240c2dd09a2cdb13b0af"
+                    "url" : "https://download.gnome.org/sources/evolution-data-server/3.40/evolution-data-server-3.40.0.tar.xz",
+                    "sha256" : "ed572f0cb6a2365809943449a8ccbee652681e2d9a1a7f4a54b60cbb53d87445"
                 }
             ]
         },
@@ -141,8 +154,8 @@
             "sources" : [
                 {
                    "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/tracker/3.0/tracker-3.0.0.tar.xz",
-                    "sha256" : "70864515f5752b0596f9c442d7e86585734f42b82a9233e55dae6ac2b0d33837"
+                    "url" : "https://download.gnome.org/sources/tracker/3.1/tracker-3.1.0.tar.xz",
+                    "sha256" : "ca55eb95758747ef802af4b31fc085a8d56fb9f6d003be8fd3e91e32d2e42875"
                 }
             ]
         },
@@ -155,8 +168,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/bijiben/3.38/bijiben-3.38.0.tar.xz",
-                    "sha256" : "1ff6cc0ac6c62907bf2a09a17215edd2f17b74dacab3a5c89a29c3049172be2b"
+                    "url" : "https://download.gnome.org/sources/bijiben/40/bijiben-40.0.tar.xz",
+                    "sha256" : "aefa0ac451628c96e54e79ab544203cbad31551c8d9ad2d896ad71da0e110f25"
                 }
             ]
         }
